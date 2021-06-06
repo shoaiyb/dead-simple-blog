@@ -18,7 +18,7 @@ Download the files and upload them to a webserver somewhere. That's it!
 
 ## Usage
 
-1. Edit "index.php" with your text editor of choice, and change the variables at the top to your liking.
+1. Edit "config.php" with your text editor of choice, and change the variables at the top to your liking.
 2. Create text files with a NUMERIC file name, I use YYYY-MM-DD date-based names (e.g. 2018-10-30.txt).
 3. Format text files with Markdown, or not. Whatever. ;)
 4. If you need to link to image/video/audio/etc. files, you can upload them to the media folder.
