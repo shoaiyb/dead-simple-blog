@@ -1,10 +1,7 @@
 <?php
+include('config.php');
 include('Parsedown.php');
 
-$base_url = '/blog/'; // URL of the homepage. Can be absolute or relative.
-$blog_title = 'Painted Sky Blog';
-$contact_email = 'blog@paintedsky.ca';
-$use_amp = 'false';   // Use amp, true to enable / false to disable.
 
 if ( !empty($_GET['post']) ) {
 	// Single post page
@@ -37,9 +34,5 @@ if ( !empty($_GET['post']) ) {
 	}
 }
 
-if($use_amp == 'true') {
-   require 'themes/amp/theme.php';
-  } else {
-   require 'themes/default/theme.php';
-}
+require __DIR__ . '/themes/' . $theme . '/theme.php';
 ?>
