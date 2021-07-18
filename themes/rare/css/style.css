@@ -15,10 +15,10 @@ a:hover {
 a:active {
 	color: #046;
 }
-h1.blog-title a {
+h1.title a {
 	text-decoration: none;
 }
-h2.list-title a {
+h2.title a {
 	color: #000;
 	text-decoration: none;
 }
