@@ -34,10 +34,14 @@ if ( !empty($_GET['post']) ) {
 	}
 }
 
-$location = __DIR__ . '/themes/' . $theme;
-require_once $location . '/theme.php';
-// Allow themes to add some functionalities
-if (file_exists($location . '/functions.php')) {
-        require_once $funcs;
+$theme = __DIR__ . '/themes/' . $theme . '/theme.php';
+if (file_exists($theme)) {
+	require_once $theme;
+} else {
+        require __DIR__ . 'themes/default/theme.php';
+}
+// Allow developers to add some functionalities
+if (file_exists(__DIR__ . '/plugins/all.php')) {
+        require_once __DIR__ . '/plugins/all.php';
 }
 ?>
