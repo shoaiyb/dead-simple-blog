@@ -1,6 +1,6 @@
 <?php
-include('config.php');
-include('Parsedown.php');
+include 'config.php';
+include 'Parsedown.php';
 
 
 if ( !empty($_GET['post']) ) {
@@ -34,7 +34,7 @@ if ( !empty($_GET['post']) ) {
 	}
 }
 
-$theme = __DIR__ . '/themes/' . $theme . '/theme.php';
+$theme = __DIR__ . '/themes/' . $blog_theme . '/theme.php';
 if (file_exists($theme)) {
 	require_once $theme;
 } else {
