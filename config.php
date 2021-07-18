@@ -10,4 +10,4 @@ $blog_title = 'Painted Sky Blog';
 $contact_email = 'blog@paintedsky.ca';
 
 // Blog theme.
-$theme = 'default';
+$blog_theme = 'default';
