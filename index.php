@@ -34,5 +34,10 @@ if ( !empty($_GET['post']) ) {
 	}
 }
 
-require __DIR__ . '/themes/' . $theme . '/theme.php';
+$location = __DIR__ . '/themes/' . $theme;
+require_once $location . '/theme.php';
+// Allow themes to add some functionalities
+if (file_exists($location . '/functions.php')) {
+        require_once $funcs;
+}
 ?>
