@@ -40,8 +40,4 @@ if (file_exists($theme)) {
 } else {
         require __DIR__ . 'themes/default/theme.php';
 }
-// Allow developers to add some functionalities
-if (file_exists(__DIR__ . '/plugins/all.php')) {
-        require_once __DIR__ . '/plugins/all.php';
-}
 ?>
