@@ -34,10 +34,41 @@ if ( !empty($_GET['post']) ) {
 	}
 }
 
-$theme = __DIR__ . '/themes/' . $blog_theme . '/theme.php';
-if (file_exists($theme)) {
-	require_once $theme;
+if( isset($blog_disqus) ) {
+		$post_url = $base_url . '?post=' . $_GET['post'] ?? '';
+		$post_id = md5($post_url);
+		$comment = <<<HTML
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = '{$post_url}';
+        this.page.identifier = '{$post_id}';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{$blog_disqus}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+HTML;
 } else {
-        require __DIR__ . 'themes/default/theme.php';
+		$comment = <<<HTML
+		This blog does not offer comment functionality. If you'd like to discuss any of the topics 
+		written about here, you can <a href="mailto:{$contact_email}">send an email</a>.
+		HTML;
+}
+
+$theme = __DIR__ . '/themes/' . $blog_theme . '/theme.php';
+if( file_exists($theme) ) {
+		require_once $theme;
+} else {
+	        require __DIR__ . 'themes/default/theme.php';
 }
 ?>
