@@ -3,7 +3,7 @@
 <head>
 	<title><?php if ( !empty($_GET['post']) ) { echo $post_title.' - '; } ?><?php echo $blog_title; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="<?= $blog_url ?>themes/default/css/style.css" />
 </head>
 <body>
 	<header>
