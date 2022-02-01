@@ -16,8 +16,7 @@
 		<?= $content; ?>
 	</article>
 	<footer class="footer">
-		This blog does not offer comment functionality. If you'd like to discuss any of the topics 
-		written about here, you can <a href="mailto:<?= $contact_email; ?>">send an email</a>.
+		<?= $comment ?>
 	</footer>
 </body>
 </html>
