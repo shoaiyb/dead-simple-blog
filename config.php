@@ -1,7 +1,7 @@
 <?php
 
 // URL of the homepage. Can be absolute or relative.
-$base_url = 'http://localhost:8080/blog/';
+$base_url = '/blog/';
 
 // Blog title.
 $blog_title = 'Painted Sky Blog';
