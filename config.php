@@ -13,4 +13,5 @@ $contact_email = 'blog@paintedsky.ca';
 $blog_theme = 'rare';
 
 // Change "demo" with your disqus username
+// Or comment the line to disable comments
 $blog_disqus = 'demo';
