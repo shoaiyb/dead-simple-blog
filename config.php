@@ -12,5 +12,5 @@ $contact_email = 'blog@paintedsky.ca';
 // Blog theme.
 $blog_theme = 'rare';
 
-// Uncomment this and change demo with your disqus username
+// Change "demo" with your disqus username
 $blog_disqus = 'demo';
